@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
 android {
     compileSdk 31
 
@@ -14,6 +16,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // 프로젝트에서 사용
+        // 타입 - 키 - 값
+        buildConfigField("String", "PIXABAY_API_KEY", properties.getProperty("pixabay_api_key"))
+        // 매니페스트에서 사용
+        manifestPlaceholders = [PIXABAY_API_KEY: properties.getProperty("pixabay_api_key")]
     }
 
     buildTypes {
