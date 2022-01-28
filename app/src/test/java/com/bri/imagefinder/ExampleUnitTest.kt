@@ -11,7 +11,12 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun `목록 불러오기`() {
+
+    }
+
+    @Test
+    fun `쿼리 입력하기`() {
+
     }
 }
