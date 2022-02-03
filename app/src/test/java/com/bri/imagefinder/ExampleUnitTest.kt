@@ -12,7 +12,7 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun `목록 불러오기`() {
-
+        
     }
 
     @Test

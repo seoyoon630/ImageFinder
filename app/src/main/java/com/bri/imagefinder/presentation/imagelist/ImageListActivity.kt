@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bri.imagefinder.R
 import com.bri.imagefinder.databinding.ActivityImageListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ImageListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityImageListBinding
     private val vm : ImageListViewModel by viewModels()
